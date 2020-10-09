@@ -1,5 +1,5 @@
 @echo off
-set VER=1.0.1
+set VER=1.0.2
 
 sed -i -E "s/version>.+?</version>%VER%</" install.rdf
 sed -i -E "s/version>.+?</version>%VER%</; s/download\/.+?\/webinstall-ninja-.+?\.xpi/download\/%VER%\/webinstall-ninja-%VER%\.xpi/" update.xml
