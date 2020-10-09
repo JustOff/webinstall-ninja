@@ -40,7 +40,7 @@ function saveFile(win, name, version, file) {
   filePicker.appendFilter("XPInstall Install", "*.xpi");
   filePicker.defaultString = name.replace(/\s/g, "-") + "-" + version + ".xpi";
   filePicker.defaultExtension = "xpi";
-  if (filePicker.show() == Ci.nsIFilePicker.returnOK) {
+  if (filePicker.show() != Ci.nsIFilePicker.returnCancel) {
     file.copyTo(filePicker.file.parent, filePicker.file.leafName);
   }
 }
